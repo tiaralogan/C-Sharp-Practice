@@ -1,1 +1,161 @@
 using system; 
+
+namespace CSharpBasics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // This is a comment with the two slashes in the front
+            /* This is another form of a comment,
+             * This comment is on multiple lines. */
+
+            // WriteLine adds a new line at the end of the statement
+            Console.WriteLine("Hello World!");
+            Console.WriteLine("Initial Commit");
+
+            // Console.Write prints a line. But it does not add a new line to the end of the statement
+            Console.Write("This is my first line");
+            Console.Write("Hello again");
+
+            // Adding a blank line so that everything is readable in the terminal
+            Console.Write("\n");
+            // Anothrer way to do this
+            // Console.WriteLine("");
+
+
+
+            /* Variables
+                    int      stores integers(whole numbers), without decimals, such as 123 or - 123
+                    double   stores floating point numbers, with decimals, such as 19.99 or - 19.99
+                    char     stores single characters, such as 'a' or 'B'.Char values are surrounded by single quotes
+                    string   stores text, such as "Hello World".String values are surrounded by double quotes
+                    bool     stores values with two states: true or false
+            */
+
+            // Syntax
+            // type variableName = value;
+
+            string firstName = "Tiara";
+            Console.WriteLine(firstName);
+
+            int practiceNumber = 15;
+            Console.WriteLine(practiceNumber);
+
+            // Initialize the number on a different line
+            // When redeclaring a variable, do not specify the type again, this will result in an error
+            int practiceNumber2;
+            practiceNumber2 = 30;
+            Console.WriteLine(practiceNumber2);
+
+            // Changing the value of a number after the initialization
+            int practiceNumber3 = 12;
+            practiceNumber3 = 19;
+            Console.WriteLine(practiceNumber3);
+
+            // const is used if you don't want to change the value of a variable. Even by accident
+            const int myConstInt = 50;
+            // myConstInt = 100; This will not work and create an error
+
+            // Examples
+            int myNum = 11;                 // Integer (whole number)
+            double myDoubleNum = 11.99D;    // Floating point number
+            char myCharacter = 'P';         // Character
+            bool myBool = true;             // Boolean
+            string myString = "Hey";        // String
+
+            // Concatination
+            Console.WriteLine("Hello, my name is " + firstName);
+
+            string lastName = "Logan";
+            string fullName = firstName + lastName;
+            Console.WriteLine(fullName);
+            Console.WriteLine(firstName + " " + lastName); // Added a space to differentiate in terminal
+
+            // Adding
+            int x = 1;
+            int y = 5;
+            Console.WriteLine(x + y); // Adds x and y and then print the statement
+
+            // Declaring many of the same type of variable
+            int s = 9, t = 2, z = 8;
+            Console.WriteLine(s + t + z);
+
+
+
+            // Identifiers: make sure they are specific b/c you will forget what they are for
+
+            //Good
+            int minutesPerHour = 60;
+
+            // This works, but it's not good
+            int m = 60;
+
+
+
+            // Different types
+
+            // Integer types
+            // int
+            int anotherIntExample = 98;
+            Console.WriteLine(anotherIntExample);
+            // long
+            long longExample = 12000000000L; // Should end value with an L
+            Console.WriteLine(longExample);
+
+            // Floating Point types
+            // float
+            float myFloat = 5.75F; // Should add an F to the end of the number
+            Console.WriteLine(myFloat);
+            // double
+            double myNextDouble = 3.45;
+            Console.WriteLine(myNextDouble);
+
+            // Scientific numbers
+            float f1 = 35e3F; // e can be lowercase
+            double d1 = 12E5D; // E can be uppercase
+            Console.WriteLine(f1);
+            Console.WriteLine(d1);
+
+            // Booleans
+            bool myNewBool = true;
+            bool myAntiNewBool = false;
+            Console.WriteLine(myNewBool);
+            Console.WriteLine(myAntiNewBool);
+
+            // Characters
+            char aNewChar = 'W';
+            Console.WriteLine(aNewChar);
+
+            // Strings
+            string greeting = "Hello Everyone";
+            Console.WriteLine(greeting);
+
+
+
+            // Casting
+            // Implicit: Done when passing smaller size type to larger size type
+            int newInt = 20;
+            double newDouble = newInt;  // Casts int to double
+            Console.WriteLine(newInt);
+            Console.WriteLine(newDouble);
+
+            // Explicit casting: specifying the type
+            double anotherDouble = 9.342D;
+            int anotherInt = (int)anotherDouble;
+            Console.WriteLine(anotherInt);
+            Console.WriteLine(anotherDouble);
+
+            // More examples
+            int finalInt = 29;
+            double finalDouble = 98.35D;
+            bool finalBool = true;
+            // Converstion Methods
+            Console.WriteLine(Convert.ToString(finalInt));
+            Console.WriteLine(Convert.ToDouble(finalInt));
+            Console.WriteLine(Convert.ToInt32(finalDouble));
+            Console.WriteLine(Convert.ToString(finalBool));
+
+        }
+    }
+}
