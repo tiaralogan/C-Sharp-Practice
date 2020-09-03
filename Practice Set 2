@@ -1,0 +1,123 @@
+using System;
+
+namespace CSharp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Getting User Input
+
+            // Username
+            Console.Write("Enter Name: ");
+            string userName = Console.ReadLine();   // Puts a new line after the input is entered
+            Console.WriteLine("Username is: " + userName);
+
+            // Age
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your age is: " + age);
+
+
+
+            // Operators
+
+            // Arithmatic operators
+            int x = 10; // Assignment operator
+            int y = 40; // Assignment operator
+
+            int a = x + y;
+            int b = x - y;
+            int c = x * y;
+            int d = x / y;
+            int e = y % x;
+            int f = x++;
+            int g = x--;
+
+            Console.WriteLine(a);
+            Console.WriteLine(b); // Will return negative
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.WriteLine(e);
+            Console.WriteLine(f);
+            Console.WriteLine(g);
+
+
+            // Assignment Operators
+            x = 10;
+
+            x += 5;
+            Console.WriteLine("+ " + x);
+
+            x -= 5;
+            Console.WriteLine("- " + x);
+
+            x *= 5;
+            Console.WriteLine("* " + x);
+
+            x /= 5;
+            Console.WriteLine("/ " + x);
+
+            x %= 5; // This is the remainder
+            Console.WriteLine("% " + x);
+
+            x = 2;
+
+            x &= 5;
+            Console.WriteLine("& " + x);
+
+            x |= 5;
+            Console.WriteLine("| " + x);
+
+            x = 2;
+
+            x ^= 5; // Bitwise Exclusive OR
+            Console.WriteLine("^ " + x);
+
+            x = 10; // = 1010
+
+            x >>= 2; // Right shift assignment. now = 0010
+            Console.WriteLine(">> " + x);
+
+            x = 10; // = 1010
+
+            x <<= 2; // Left shift assignment. now = 101000
+            Console.WriteLine("<< " + x);
+
+
+
+            // Comparison operators
+            x = 10;
+            y = 5;
+
+            Console.WriteLine(x == y);
+            Console.WriteLine(x != y);
+            Console.WriteLine(x > y);
+            Console.WriteLine(x < y);
+            Console.WriteLine(x >= y);
+            y = 10;
+            Console.WriteLine(x <= y);
+
+
+
+            // Logical Operators
+            Console.WriteLine(x > 5 && y <= 5);
+            Console.WriteLine(x < 5 && y <= 5);
+
+            Console.WriteLine(x > 5 || y <= 5);
+            Console.WriteLine(x > 5 || y < 5);
+
+            Console.WriteLine(!(x > 5 && y <= 5));
+            Console.WriteLine(!(x < 5 && y <= 5));
+
+
+
+            // Math
+            Console.WriteLine(Math.Max(5, 10));
+            Console.WriteLine(Math.Min(5, 10));
+            Console.WriteLine(Math.Sqrt(49));
+            Console.WriteLine(Math.Abs(-30));
+            Console.WriteLine(Math.Round(9.77));
+        }
+    }
+}
