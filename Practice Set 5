@@ -1,0 +1,142 @@
+using System;
+
+namespace CSharp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Call method
+            MyMethod();
+            MyMethod();
+            MyMethod();
+
+
+
+            // Call method with parameters
+            MyNameMethod("Tiara");
+            MyNameMethod("Imani");
+            MyNameMethod("Daisy");
+
+            // Call method with default value
+            DefaultMethod("Jamaica");
+            DefaultMethod("India");
+            DefaultMethod();
+
+            // Calling method with multiple parameters
+            MultipleParameters("Logan", 20);
+            MultipleParameters("Brown", 31);
+            MultipleParameters("Tiara", 21);
+
+            // Adding to a number in a method
+            Console.WriteLine(AddingToANumber(5));
+            Console.WriteLine(AddingToANumber(2));
+            Console.WriteLine(AddingToANumber(9));
+
+            // Adding two numbers in a method
+            Console.WriteLine(AddingNumbers(3, 6));
+            Console.WriteLine(AddingNumbers(6, 2));
+            Console.WriteLine(AddingNumbers(9, 7));
+
+            // Calling method with named arguments
+            NamedArguments(child1: "Tiffany", child3: "Maria", child2: "Stephanie"); // order does not matter with named arguements 
+            NamedArguments(child1: "Kevin", child3: "Mark", child2: "Alicia");
+
+            // Calling method with named arguments that are defaulted
+            NamedArguments2("child2");
+
+
+
+            // Method Overloading
+            int numberOne = PlusMethodInt(9, 3);
+            double numberTwo = PlusMethodDouble(3.53, 5.86);
+            Console.WriteLine("Int: " + numberOne);
+            Console.WriteLine("Double: " + numberTwo);
+
+            int numberThree = PlusMethod(8, 3);
+            double numberFour = PlusMethod(9.23, 3.60);
+            Console.WriteLine("Int: " + numberThree);
+            Console.WriteLine("Double: " + numberFour);
+
+        }
+
+
+
+        // New Method
+        static void MyMethod()
+        {
+            Console.WriteLine("I am a line in a new method");
+        }
+        /*   - MyMethod() is the name of the method
+             - static means that the method belongs to the Program class and not an object of the Program class.
+             You will learn more about objects and how to access methods through objects later in this tutorial.
+             - void means that this method does not have a return value.You will learn more about return values later in this chapter
+        */
+
+
+        // Method with parameters
+        static void MyNameMethod(string fName)
+        {
+            Console.WriteLine(fName + " Logan");
+        }
+
+
+        // Method with default value
+        static void DefaultMethod(string country = "Norway")
+        {
+            Console.WriteLine(country);
+        }
+
+        // Methods with multiple parameters
+        static void MultipleParameters(string fName, int age)
+        {
+            Console.WriteLine(fName + " is " + age);
+        }
+
+        // Methods for adding ... returning a value, can't use void. Use type of return value for replacement
+        static int AddingToANumber(int x)
+        {
+            return (5 + x);
+        }
+
+        // Method for adding with multiple parameters
+        static int AddingNumbers(int x, int y)
+        {
+            return (x + y);
+        }
+
+        // Named arguments
+        static void NamedArguments(string child1, string child2, string child3)
+        {
+            Console.WriteLine("The youngest child is: " + child3);
+        }
+
+        // Named arguments with default parameters. They all need default values
+        static void NamedArguments2(string child1 = "Monica", string child2 = "Brittney", string child3 = "Amaya")
+        {
+            Console.WriteLine(child3);
+        }
+
+
+
+        static int PlusMethodInt(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double PlusMethodDouble(double x, double y)
+        {
+            return x + y;
+        }
+
+        static int PlusMethod(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double PlusMethod(double x, double y)
+        {
+            return x + y;
+        }
+    }
+}
