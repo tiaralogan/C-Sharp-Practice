@@ -1,0 +1,138 @@
+using System;
+
+namespace CSharp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // C# Strings
+            string greeting = "Hello";
+
+            // Length
+            string checkingLength = "I wonder how long this string is?";
+            Console.WriteLine("The length of this string is: " + checkingLength.Length);
+
+            // Upper and lower case
+            string upperAndLowerText = "Hello World";
+            Console.WriteLine(upperAndLowerText.ToUpper());
+            Console.WriteLine(upperAndLowerText.ToLower());
+
+            // String concatination
+            string firstName = "Tiara";
+            string lastName = "Logan";
+            string fullName = firstName + lastName;
+            Console.WriteLine(fullName);
+
+            string fullName2 = string.Concat(firstName, lastName);
+            Console.WriteLine(fullName2);
+
+            // String Interpolation
+            string fullName3 = $"My full name is: {firstName} {lastName}";
+            Console.WriteLine(fullName3);
+
+            // Access String Characters
+            string testString = "Hello World";
+            Console.WriteLine(testString[0]);
+            Console.WriteLine(testString[1]);
+
+            Console.WriteLine(testString.IndexOf("e")); // letter of index
+
+            int characterPosition = testString.IndexOf("W"); // index of letter
+            Console.WriteLine(characterPosition);
+
+            string substringTest = testString.Substring(characterPosition); // substring
+            Console.WriteLine(substringTest);
+
+            // Special Characters
+            string quotes = "We are the so-called \"Vikings\" from the north.";
+            Console.WriteLine(quotes);
+
+            string singleQuote = "It\'s just me.";
+            Console.WriteLine(singleQuote);
+
+            string backSlash = "This character \\ is called a backslash";
+            Console.WriteLine(backSlash);
+
+            string backSlash2 = "Two \\\\ backslash\'s";
+            Console.WriteLine(backSlash2);
+
+            string newLine = "This line is very long \n I think I am gonna continue this statement on another line";
+            Console.WriteLine(newLine);
+
+            string tab = "\t I am going to tab this line";
+            Console.WriteLine(tab);
+
+            string backSpace = "I am going to practice backspaci\bng";
+            Console.WriteLine(backSpace);
+
+            // Adding Numbers and Strings
+            int x = 10;
+            int y = 20;
+            int z = x + y;
+            Console.WriteLine(z);
+
+            string a = "10";
+            string b = "20";
+            string c = a + b;
+            Console.WriteLine(c);
+            
+            // Booleans
+            bool trueBool = true;
+            bool falseBool = false;
+            Console.WriteLine(trueBool);
+            Console.WriteLine(falseBool);
+
+            // Boolean Expression
+            x = 10;
+            y = 20;
+            Console.WriteLine(x > y);
+            Console.WriteLine(x < y);
+            Console.WriteLine(90 < 70);
+            Console.WriteLine(x == 10);
+            Console.WriteLine(x == 15);
+            
+            // If-statements
+            if (20 > 18)
+            {
+                Console.WriteLine("20 is greater that 18");
+            }
+            x = 20;
+            y = 18;
+            if (x > y)
+            {
+                Console.WriteLine("x is greater that y");
+            }
+
+            // Else statements
+            int time = 20;
+            if (time < 18)
+            {
+                Console.WriteLine("Good Day.");
+            } else
+            {
+                Console.WriteLine("Good Evening.");
+            }
+
+            time = 22;
+            if (time < 10)
+            {
+                Console.WriteLine("Good Morning.");
+            }
+            else if (time < 20)
+            {
+                Console.WriteLine("Good Day.");
+            }
+            else
+            {
+                Console.WriteLine("Good Evening.");
+            }
+
+            // Shorthand if...else
+            time = 20;
+            string result = (time < 18) ? "Good Day." : "Good Evening.";
+            Console.WriteLine(result);
+        
+        }
+    }
+}
